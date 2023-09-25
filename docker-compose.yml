@@ -24,7 +24,7 @@ services:
       - postgres-product-data:/var/lib/postgresql/data
 
   user-service:
-    build: ./path/to/your/user-service
+    build: ./userservice
     container_name: user-service
     depends_on:
       - postgres_user
@@ -36,7 +36,7 @@ services:
       - "8080:8080"
 
   product-service:
-    build: ./path/to/your/product-service
+    build: ./productservice
     container_name: product-service
     depends_on:
       - postgres_product
